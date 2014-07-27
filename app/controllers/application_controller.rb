@@ -5,10 +5,10 @@ protect_from_forgery with: :exception
   def chicago
   end
   def city
-    if params['city'] == 'Chicago'
-      redirect_to '/correct'
+    if params['city'].downcase == 'chicago'
+      redirect_to '/good'
     else
-      redirect_to '/wrong'
+      redirect_to '/bad'
     end
   end
 end
