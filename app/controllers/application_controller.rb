@@ -7,7 +7,7 @@ protect_from_forgery with: :exception
   end
   
   def city
-    if params['city'] == 'chicago'
+    if params['city'] == 'Chicago'
       redirect_to '/good'
     else
       redirect_to '/bad'
